@@ -1,7 +1,7 @@
 ---
 template_id: partnership
 category: institutional
-channels: [mastodon, discord, linkedin]
+channels: [mastodon, discord, linkedin, bluesky]
 variables: [event.title, event.summary, event.url, event.partner_name, event.date]
 checklist_items:
   - Partner approval received
@@ -28,6 +28,14 @@ In collaboration with {{ event.partner_name }}.
 **Partner:** {{ event.partner_name }}
 **Date:** {{ event.date }}
 **Details:** {{ event.url }}
+{{/channel}}
+
+{{#channel bluesky}}
+{{ event.title }}
+
+With {{ event.partner_name }}.
+
+{{ event.url }}
 {{/channel}}
 
 {{#channel linkedin}}

@@ -1,7 +1,7 @@
 ---
 template_id: press-release
 category: institutional
-channels: [mastodon, discord, linkedin]
+channels: [mastodon, discord, linkedin, bluesky]
 variables: [event.title, event.summary, event.url, event.date, event.contact]
 checklist_items:
   - Press release reviewed for accuracy
@@ -29,6 +29,14 @@ checklist_items:
 {{#if event.contact}}
 **Contact:** {{ event.contact }}
 {{/if}}
+{{/channel}}
+
+{{#channel bluesky}}
+{{ event.title }}
+
+{{ event.summary }}
+
+{{ event.url }}
 {{/channel}}
 
 {{#channel linkedin}}

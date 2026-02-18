@@ -1,7 +1,7 @@
 ---
 template_id: grant-supplement
 category: institutional
-channels: [mastodon, discord, linkedin]
+channels: [mastodon, discord, linkedin, bluesky]
 variables: [event.title, event.summary, event.url, event.funder, event.date]
 checklist_items:
   - Grant funder acknowledged
@@ -32,6 +32,14 @@ Supported by {{ event.funder }}.
 {{/if}}
 **Date:** {{ event.date }}
 **Details:** {{ event.url }}
+{{/channel}}
+
+{{#channel bluesky}}
+{{ event.title }}
+
+{{ event.summary }}
+
+{{ event.url }}
 {{/channel}}
 
 {{#channel linkedin}}
