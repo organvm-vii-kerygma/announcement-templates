@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "announcement-templates"
+version = "0.1.0"
+description = "Template engine and announcement library for ORGAN VII Kerygma distribution"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.4.0"]
+
+[project.scripts]
+announce = "kerygma_templates.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kerygma_templates*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 99

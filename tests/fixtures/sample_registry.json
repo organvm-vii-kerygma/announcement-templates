@@ -1,0 +1,36 @@
+{
+  "project_status": "OPERATIONAL",
+  "organs": {
+    "i-theoria": {
+      "name": "ORGAN I — Theoria",
+      "repos": [
+        {
+          "name": "recursive-engine",
+          "description": "Self-modifying recursive computation engine",
+          "tier": "flagship",
+          "url": "https://github.com/organvm-i-theoria/recursive-engine",
+          "implementation_status": "PRODUCTION"
+        },
+        {
+          "name": "cognitive-archaeology-tribunal",
+          "description": "Archaeological analysis of cognitive systems",
+          "tier": "standard",
+          "url": "https://github.com/organvm-i-theoria/cognitive-archaeology-tribunal",
+          "implementation_status": "PROTOTYPE"
+        }
+      ]
+    },
+    "ii-poiesis": {
+      "name": "ORGAN II — Poiesis",
+      "repos": [
+        {
+          "name": "metasystem-master",
+          "description": "Master coordination hub for the metasystem",
+          "tier": "flagship",
+          "url": "https://github.com/organvm-ii-poiesis/metasystem-master",
+          "implementation_status": "PRODUCTION"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "event_type": "essay-published",
+  "repo_name": "public-process",
+  "organ": "v-logos",
+  "title": "Orchestrating the Eight Organs",
+  "summary": "A new essay exploring how the eight organs coordinate across the creative-institutional system.",
+  "url": "https://organvm-v-logos.github.io/public-process/essays/01-orchestrate.html",
+  "date": "2026-02-17",
+  "tags": ["organvm", "essay", "orchestration"]
+}
