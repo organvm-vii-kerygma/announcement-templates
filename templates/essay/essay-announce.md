@@ -1,7 +1,7 @@
 ---
 template_id: essay-announce
 category: essay
-channels: [mastodon, discord, bluesky, linkedin]
+channels: [mastodon, discord, bluesky, linkedin, ghost]
 variables: [event.title, event.summary, event.url, event.date, event.tags]
 checklist_items:
   - Essay published to GitHub Pages
@@ -48,4 +48,11 @@ New essay published in the organvm public process:
 {{ event.url }}
 
 #organvm #writing #essay
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+[Read the full essay]({{ event.url }})
 {{/channel}}

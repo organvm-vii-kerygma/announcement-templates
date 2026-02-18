@@ -1,7 +1,7 @@
 ---
 template_id: system-milestone
 category: launch
-channels: [mastodon, discord, bluesky, linkedin]
+channels: [mastodon, discord, bluesky, linkedin, ghost]
 variables: [event.title, event.summary, event.url, event.date]
 checklist_items:
   - Milestone validated across all organs
@@ -45,4 +45,13 @@ The organvm system continues to evolve. This milestone represents progress acros
 {{ event.url }}
 
 #organvm #milestone #progress
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+The organvm system continues to evolve. This milestone represents progress across all eight organs of the creative-institutional framework.
+
+[Details]({{ event.url }})
 {{/channel}}

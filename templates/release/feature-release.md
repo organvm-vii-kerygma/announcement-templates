@@ -1,7 +1,7 @@
 ---
 template_id: feature-release
 category: release
-channels: [mastodon, discord, bluesky]
+channels: [mastodon, discord, bluesky, ghost]
 variables: [repo.name, repo.url, event.title, event.summary, event.version, event.date]
 checklist_items:
   - CHANGELOG updated
@@ -32,4 +32,11 @@ checklist_items:
 {{ repo.name }} {{ event.version }} — {{ event.summary }}
 
 {{ repo.url }}
+{{/channel}}
+{{#channel ghost}}
+# {{ repo.name }} {{ event.version }}
+
+{{ event.summary }}
+
+[View release]({{ repo.url }})
 {{/channel}}

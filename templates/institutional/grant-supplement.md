@@ -1,7 +1,7 @@
 ---
 template_id: grant-supplement
 category: institutional
-channels: [mastodon, discord, linkedin, bluesky]
+channels: [mastodon, discord, linkedin, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.funder, event.date]
 checklist_items:
   - Grant funder acknowledged
@@ -56,4 +56,15 @@ The organvm system continues to grow through institutional support and open coll
 {{ event.url }}
 
 #organvm #grant #funding #research
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+{{#if event.funder}}
+We gratefully acknowledge the support of {{ event.funder }} in making this work possible.
+{{/if}}
+
+[Details]({{ event.url }})
 {{/channel}}

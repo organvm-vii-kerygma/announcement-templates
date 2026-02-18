@@ -16,6 +16,7 @@ CHANNEL_LIMITS: dict[str, int] = {
     "discord": 4096,
     "linkedin": 1300,
     "bluesky": 300,
+    "ghost": 0,
     "twitter": 280,
 }
 

@@ -1,7 +1,7 @@
 ---
 template_id: organ-launch
 category: launch
-channels: [mastodon, discord, bluesky, linkedin]
+channels: [mastodon, discord, bluesky, linkedin, ghost]
 variables: [event.title, event.summary, event.url, event.organ, event.date]
 checklist_items:
   - All organ repos documented
@@ -47,4 +47,13 @@ This marks a significant milestone in the organvm creative-institutional system 
 {{ event.url }}
 
 #organvm #launch #opensource
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+This marks a significant milestone in the organvm creative-institutional system — a new organ is now fully operational and contributing to the eight-organ architecture.
+
+[Learn more]({{ event.url }})
 {{/channel}}

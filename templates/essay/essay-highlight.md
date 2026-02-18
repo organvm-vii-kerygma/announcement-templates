@@ -1,7 +1,7 @@
 ---
 template_id: essay-highlight
 category: essay
-channels: [mastodon, discord, bluesky]
+channels: [mastodon, discord, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.quote]
 checklist_items:
   - Key quote selected
@@ -33,4 +33,11 @@ Read the full essay:
 — from "{{ event.title }}"
 
 {{ event.url }}
+{{/channel}}
+{{#channel ghost}}
+# From "{{ event.title }}"
+
+> {{ event.quote }}
+
+[Read the full essay]({{ event.url }})
 {{/channel}}

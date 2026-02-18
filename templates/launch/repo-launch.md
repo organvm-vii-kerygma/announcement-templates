@@ -1,7 +1,7 @@
 ---
 template_id: repo-launch
 category: launch
-channels: [mastodon, discord, bluesky, linkedin]
+channels: [mastodon, discord, bluesky, linkedin, ghost]
 variables: [repo.name, repo.organ, repo.description, repo.url, event.date, event.tags]
 checklist_items:
   - README deployed and reviewed
@@ -53,4 +53,15 @@ This project is part of ORGAN {{ repo.organ }}, contributing to our growing ecos
 {{ repo.url }}
 
 #organvm #opensource #software
+{{/channel}}
+{{#channel ghost}}
+# New Repository: {{ repo.name }}
+
+{{ repo.description }}
+
+**Organ:** {{ repo.organ }}
+
+This repository is now live in the organvm creative-institutional system, ready for exploration and contribution.
+
+[View on GitHub]({{ repo.url }})
 {{/channel}}

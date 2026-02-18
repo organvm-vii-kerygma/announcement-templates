@@ -1,7 +1,7 @@
 ---
 template_id: bugfix-release
 category: release
-channels: [mastodon, discord, bluesky]
+channels: [mastodon, discord, bluesky, ghost]
 variables: [repo.name, repo.url, event.summary, event.version, event.date]
 checklist_items:
   - Bug root cause documented
@@ -34,4 +34,11 @@ Bugfix: {{ repo.name }} {{ event.version }}
 {{ event.summary }}
 
 {{ repo.url }}
+{{/channel}}
+{{#channel ghost}}
+# Bugfix: {{ repo.name }} {{ event.version }}
+
+{{ event.summary }}
+
+[View release]({{ repo.url }})
 {{/channel}}

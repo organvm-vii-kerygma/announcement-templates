@@ -1,7 +1,7 @@
 ---
 template_id: press-release
 category: institutional
-channels: [mastodon, discord, linkedin, bluesky]
+channels: [mastodon, discord, linkedin, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.date, event.contact]
 checklist_items:
   - Press release reviewed for accuracy
@@ -49,4 +49,15 @@ The organvm project continues to push the boundaries of creative-institutional s
 {{ event.url }}
 
 #organvm #press #announcement
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+{{#if event.contact}}
+**Press contact:** {{ event.contact }}
+{{/if}}
+
+[Full press release]({{ event.url }})
 {{/channel}}

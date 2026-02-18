@@ -1,7 +1,7 @@
 ---
 template_id: reading-group
 category: community
-channels: [mastodon, discord, bluesky]
+channels: [mastodon, discord, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.date, event.book_title, event.author]
 checklist_items:
   - Reading material selected
@@ -39,4 +39,15 @@ Reading group: {{ event.title }}
 "{{ event.book_title }}" by {{ event.author }}
 
 {{ event.url }}
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+We'll be discussing "{{ event.book_title }}" by {{ event.author }}.
+
+{{ event.summary }}
+
+**Date:** {{ event.date }}
+
+[Details]({{ event.url }})
 {{/channel}}

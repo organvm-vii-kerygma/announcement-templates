@@ -1,7 +1,7 @@
 ---
 template_id: salon-invite
 category: community
-channels: [mastodon, discord, bluesky]
+channels: [mastodon, discord, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.date, event.time, event.location]
 checklist_items:
   - Event date and time confirmed
@@ -38,4 +38,14 @@ Salon: {{ event.title }}
 {{ event.summary }}
 
 {{ event.date }} — {{ event.url }}
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+**When:** {{ event.date }} at {{ event.time }}
+**Where:** {{ event.location }}
+
+[Details and RSVP]({{ event.url }})
 {{/channel}}

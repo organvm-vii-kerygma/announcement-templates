@@ -1,7 +1,7 @@
 ---
 template_id: partnership
 category: institutional
-channels: [mastodon, discord, linkedin, bluesky]
+channels: [mastodon, discord, linkedin, bluesky, ghost]
 variables: [event.title, event.summary, event.url, event.partner_name, event.date]
 checklist_items:
   - Partner approval received
@@ -48,4 +48,13 @@ We are thrilled to collaborate with {{ event.partner_name }} to advance the orga
 {{ event.url }}
 
 #organvm #partnership #collaboration
+{{/channel}}
+{{#channel ghost}}
+# {{ event.title }}
+
+{{ event.summary }}
+
+In collaboration with {{ event.partner_name }}, this partnership advances the organvm creative-institutional ecosystem.
+
+[Learn more]({{ event.url }})
 {{/channel}}

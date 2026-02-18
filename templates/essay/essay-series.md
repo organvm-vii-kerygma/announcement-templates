@@ -1,7 +1,7 @@
 ---
 template_id: essay-series
 category: essay
-channels: [mastodon, discord, bluesky, linkedin]
+channels: [mastodon, discord, bluesky, linkedin, ghost]
 variables: [event.title, event.summary, event.url, event.series_name, event.part_number, event.date]
 checklist_items:
   - Previous parts linked in essay
@@ -49,4 +49,13 @@ Part {{ event.part_number }} of the "{{ event.series_name }}" essay series is no
 {{ event.url }}
 
 #organvm #writing #series
+{{/channel}}
+{{#channel ghost}}
+# {{ event.series_name }} — Part {{ event.part_number }}
+
+## {{ event.title }}
+
+{{ event.summary }}
+
+[Read Part {{ event.part_number }}]({{ event.url }})
 {{/channel}}
