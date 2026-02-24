@@ -19,5 +19,15 @@ agents:
   trigger: on_push
   workflow: .github/workflows/ci-minimal.yml
   description: Continuous integration pipeline
+produces:
+  - type: template_pack
+    description: "Template registry with metadata, quality checks, and channel limits"
+    consumers: [ORGAN-IV]
+
+data_artifacts:
+  - path: data/template-registry.json
+    type: template_pack
+    description: "Template inventory, quality summary, channel limits"
+
 consumes: []
 subscriptions: []

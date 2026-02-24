@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-02-24T14:21:50.276239+00:00",
+  "organ": "VII",
+  "organ_name": "Kerygma",
+  "repo": "announcement-templates",
+  "template_count": 16,
+  "categories": [
+    "community",
+    "essay",
+    "institutional",
+    "launch",
+    "release"
+  ],
+  "all_channels": [
+    "bluesky",
+    "discord",
+    "ghost",
+    "linkedin",
+    "mastodon"
+  ],
+  "templates": [
+    {
+      "template_id": "community-milestone",
+      "category": "community",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "milestone.title",
+        "milestone.type",
+        "milestone.summary",
+        "milestone.source_organ",
+        "milestone.issue_url"
+      ]
+    },
+    {
+      "template_id": "reading-group",
+      "category": "community",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date",
+        "event.book_title",
+        "event.author"
+      ]
+    },
+    {
+      "template_id": "salon-invite",
+      "category": "community",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date",
+        "event.time",
+        "event.location"
+      ]
+    },
+    {
+      "template_id": "workshop-sprint",
+      "category": "community",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date",
+        "event.duration"
+      ]
+    },
+    {
+      "template_id": "essay-announce",
+      "category": "essay",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "linkedin",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date",
+        "event.tags"
+      ]
+    },
+    {
+      "template_id": "essay-highlight",
+      "category": "essay",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.quote"
+      ]
+    },
+    {
+      "template_id": "essay-series",
+      "category": "essay",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "linkedin",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.series_name",
+        "event.part_number",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "grant-supplement",
+      "category": "institutional",
+      "channels": [
+        "mastodon",
+        "discord",
+        "linkedin",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.funder",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "partnership",
+      "category": "institutional",
+      "channels": [
+        "mastodon",
+        "discord",
+        "linkedin",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.partner_name",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "press-release",
+      "category": "institutional",
+      "channels": [
+        "mastodon",
+        "discord",
+        "linkedin",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date",
+        "event.contact"
+      ]
+    },
+    {
+      "template_id": "organ-launch",
+      "category": "launch",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "linkedin",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.organ",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "repo-launch",
+      "category": "launch",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "linkedin",
+        "ghost"
+      ],
+      "variables": [
+        "repo.name",
+        "repo.organ",
+        "repo.description",
+        "repo.url",
+        "event.date",
+        "event.tags"
+      ]
+    },
+    {
+      "template_id": "system-milestone",
+      "category": "launch",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "linkedin",
+        "ghost"
+      ],
+      "variables": [
+        "event.title",
+        "event.summary",
+        "event.url",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "breaking-change",
+      "category": "release",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "repo.name",
+        "repo.url",
+        "event.title",
+        "event.summary",
+        "event.version",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "bugfix-release",
+      "category": "release",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "repo.name",
+        "repo.url",
+        "event.summary",
+        "event.version",
+        "event.date"
+      ]
+    },
+    {
+      "template_id": "feature-release",
+      "category": "release",
+      "channels": [
+        "mastodon",
+        "discord",
+        "bluesky",
+        "ghost"
+      ],
+      "variables": [
+        "repo.name",
+        "repo.url",
+        "event.title",
+        "event.summary",
+        "event.version",
+        "event.date"
+      ]
+    }
+  ],
+  "channel_limits": {
+    "mastodon": 500,
+    "discord": 4096,
+    "linkedin": 1300,
+    "bluesky": 300,
+    "ghost": 0,
+    "twitter": 280
+  },
+  "quality_summary": {
+    "total_checks": 432,
+    "passed": 422,
+    "failed": 6,
+    "warnings": 4
+  }
+}
