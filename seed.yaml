@@ -1,0 +1,23 @@
+# seed.yaml — Automation Contract for organvm-vii-kerygma/announcement-templates
+# Schema: seed/v1.0
+# Generated: 2026-02-24 (IGNITION Sprint)
+
+schema_version: '1.0'
+organ: VII
+organ_name: Marketing
+repo: announcement-templates
+org: organvm-vii-kerygma
+metadata:
+  implementation_status: ACTIVE
+  tier: archive
+  promotion_status: GRADUATED
+  last_validated: '2026-02-18'
+  generated: '2026-02-24'
+  sprint: IGNITION
+agents:
+- name: ci
+  trigger: on_push
+  workflow: .github/workflows/ci-minimal.yml
+  description: Continuous integration pipeline
+consumes: []
+subscriptions: []

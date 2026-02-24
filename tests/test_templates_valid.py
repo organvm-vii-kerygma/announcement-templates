@@ -1,4 +1,4 @@
-"""Parametrized validation tests for all 15 template files."""
+"""Parametrized validation tests for all 16 template files."""
 
 import pytest
 from pathlib import Path
@@ -69,9 +69,9 @@ def test_template_renders_all_channels(template_file: Path):
         )
 
 
-def test_all_15_templates_discovered():
-    """Verify we have exactly 15 template files."""
-    assert len(TEMPLATE_FILES) == 15, (
-        f"Expected 15 templates, found {len(TEMPLATE_FILES)}: "
+def test_all_16_templates_discovered():
+    """Verify we have exactly 16 template files."""
+    assert len(TEMPLATE_FILES) == 16, (
+        f"Expected 16 templates, found {len(TEMPLATE_FILES)}: "
         f"{[f.stem for f in TEMPLATE_FILES]}"
     )
