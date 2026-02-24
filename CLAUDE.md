@@ -15,7 +15,8 @@ Source is in `kerygma_templates/`, installed as the `kerygma_templates` package:
 | `engine.py` | `TemplateEngine` — loads `.md` templates, renders with `{{ var }}` interpolation, `{{#if}}` conditionals, `{{#channel name}}` blocks. Custom frontmatter parser using regex (not pyyaml). |
 | `quality_checker.py` | `QualityChecker` — validates rendered text: char limits per platform (`CHANNEL_LIMITS`), unresolved vars, anti-patterns, hashtag counts, link presence. Returns `QualityReport`. |
 | `registry_loader.py` | `RegistryLoader` — loads ORGAN-IV's `registry-v2.json`, builds template context dicts. `EventContext` dataclass carries event metadata. `build_context()` merges event + repo + system data. |
-| `cli.py` | CLI entry point (`announce`): `list`, `render <id> <channel>`, `validate`, `check <id> <channel>`. Uses `_sample_context()` for demo rendering. |
+| `cli.py` | CLI entry point (`announce`): `list`, `render <id> <channel>`, `validate`, `check <id> <channel>`. Uses `sample_context()` for demo rendering. |
+| `data_export.py` | Generates `data/template-registry.json` — template inventory, channel limits, quality summary with per-failure detail. CLI: `announce-export` or `python -m kerygma_templates.data_export`. |
 
 ## Templates
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T14:21:50.276239+00:00",
+  "generated_at": "2026-02-24T16:31:21.473014+00:00",
   "organ": "VII",
   "organ_name": "Kerygma",
   "repo": "announcement-templates",
@@ -316,6 +316,78 @@
     "total_checks": 432,
     "passed": 422,
     "failed": 6,
-    "warnings": 4
+    "warnings": 4,
+    "failure_details": [
+      {
+        "template_id": "community-milestone",
+        "channel": "mastodon",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: milestone.title, milestone.summary, milestone.issue_url"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "mastodon",
+        "check": "has_link",
+        "severity": "warning",
+        "message": "No links found \u2014 announcements should link to canonical content"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "discord",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: milestone.title, milestone.summary, milestone.type, milestone.source_organ, milestone.issue_url"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "discord",
+        "check": "has_link",
+        "severity": "warning",
+        "message": "No links found \u2014 announcements should link to canonical content"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "bluesky",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: milestone.title, milestone.summary, milestone.issue_url"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "bluesky",
+        "check": "has_link",
+        "severity": "warning",
+        "message": "No links found \u2014 announcements should link to canonical content"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "ghost",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: milestone.title, milestone.summary, milestone.type, milestone.source_organ, milestone.issue_url"
+      },
+      {
+        "template_id": "community-milestone",
+        "channel": "ghost",
+        "check": "has_link",
+        "severity": "warning",
+        "message": "No links found \u2014 announcements should link to canonical content"
+      },
+      {
+        "template_id": "organ-launch",
+        "channel": "mastodon",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: event.organ"
+      },
+      {
+        "template_id": "organ-launch",
+        "channel": "discord",
+        "check": "unresolved_vars",
+        "severity": "error",
+        "message": "Unresolved variables: event.organ"
+      }
+    ]
   }
 }

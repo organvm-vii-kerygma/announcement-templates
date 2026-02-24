@@ -30,7 +30,7 @@ def _find_templates_dir() -> Path:
     return pkg_dir
 
 
-def _sample_context() -> dict[str, object]:
+def sample_context() -> dict[str, object]:
     """Build a sample context for rendering demos."""
     return {
         "repo": {
@@ -82,7 +82,7 @@ def cmd_list(engine: TemplateEngine) -> None:
 
 
 def cmd_render(engine: TemplateEngine, template_id: str, channel: str) -> None:
-    context = _sample_context()
+    context = sample_context()
     result = engine.render(template_id, context, channel)
     print(result.text)
     if result.unresolved_vars:
@@ -91,7 +91,7 @@ def cmd_render(engine: TemplateEngine, template_id: str, channel: str) -> None:
 
 def cmd_validate(engine: TemplateEngine) -> None:
     templates = engine.list_templates()
-    context = _sample_context()
+    context = sample_context()
     errors = 0
     for t in templates:
         for ch in t.channels:
@@ -108,7 +108,7 @@ def cmd_validate(engine: TemplateEngine) -> None:
 
 
 def cmd_check(engine: TemplateEngine, template_id: str, channel: str) -> None:
-    context = _sample_context()
+    context = sample_context()
     result = engine.render(template_id, context, channel)
     checker = QualityChecker()
     report = checker.check(result.text, channel, template_id, result.unresolved_vars)

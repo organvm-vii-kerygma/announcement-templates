@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from kerygma_templates.cli import _sample_context
+from kerygma_templates.cli import sample_context
 from kerygma_templates.engine import TemplateEngine
 from kerygma_templates.quality_checker import CHANNEL_LIMITS, QualityChecker
 
@@ -64,13 +64,14 @@ def build_quality_summary(templates_dir: Path | None = None) -> dict[str, Any]:
         engine.load_directory(templates_dir)
 
     templates = engine.list_templates()
-    context = _sample_context()
+    context = sample_context()
     checker = QualityChecker()
 
     total_checks = 0
     passed = 0
     failed = 0
     warnings = 0
+    failure_details: list[dict[str, str]] = []
 
     for t in templates:
         for ch in t.channels:
@@ -85,17 +86,39 @@ def build_quality_summary(templates_dir: Path | None = None) -> dict[str, Any]:
                         passed += 1
                     elif check.severity == "warning":
                         warnings += 1
+                        failure_details.append({
+                            "template_id": t.template_id,
+                            "channel": ch,
+                            "check": check.check_name,
+                            "severity": "warning",
+                            "message": check.message,
+                        })
                     else:
                         failed += 1
-            except Exception:
+                        failure_details.append({
+                            "template_id": t.template_id,
+                            "channel": ch,
+                            "check": check.check_name,
+                            "severity": "error",
+                            "message": check.message,
+                        })
+            except Exception as exc:
                 total_checks += 1
                 failed += 1
+                failure_details.append({
+                    "template_id": t.template_id,
+                    "channel": ch,
+                    "check": "render",
+                    "severity": "error",
+                    "message": str(exc),
+                })
 
     return {
         "total_checks": total_checks,
         "passed": passed,
         "failed": failed,
         "warnings": warnings,
+        "failure_details": failure_details,
     }
 
 
