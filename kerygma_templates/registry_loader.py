@@ -87,8 +87,15 @@ class RegistryLoader:
         self,
         event: EventContext,
         repo_name: str | None = None,
+        profile: Any | None = None,
     ) -> dict[str, Any]:
-        """Build a full template context dict from event + registry data."""
+        """Build a full template context dict from event + registry data.
+
+        Args:
+            event: Event context with type, title, summary, etc.
+            repo_name: Repository name for registry lookup.
+            profile: Optional ProjectProfile for per-project voice variables.
+        """
         ctx: dict[str, Any] = {
             "event": {
                 "type": event.event_type,
@@ -130,6 +137,16 @@ class RegistryLoader:
             "site_url": "https://organvm-v-logos.github.io/public-process/",
             "org_prefix": "organvm",
         }
+
+        # Per-project voice variables from profile
+        if profile:
+            voice = getattr(profile, "voice", {}) or {}
+            ctx["project"] = {
+                "name": getattr(profile, "display_name", ""),
+                "tagline": voice.get("tagline", ""),
+                "hashtags": " ".join(voice.get("hashtags", [])),
+                "tone": voice.get("tone", "neutral"),
+            }
 
         return ctx
 
