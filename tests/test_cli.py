@@ -1,11 +1,7 @@
 """Tests for the CLI module."""
 
-import sys
-from io import StringIO
-from pathlib import Path
-from unittest.mock import patch
 
-from kerygma_templates.cli import main, _find_templates_dir
+from kerygma_templates.cli import main
 
 
 class TestCLI:

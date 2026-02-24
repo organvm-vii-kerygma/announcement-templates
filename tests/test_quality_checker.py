@@ -1,6 +1,6 @@
 """Tests for the quality checker."""
 
-from kerygma_templates.quality_checker import QualityChecker, CHANNEL_LIMITS
+from kerygma_templates.quality_checker import QualityChecker
 
 
 class TestQualityChecker:
