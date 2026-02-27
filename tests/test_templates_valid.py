@@ -1,4 +1,4 @@
-"""Parametrized validation tests for all 16 template files."""
+"""Parametrized validation tests for all 17 template files."""
 
 import pytest
 from pathlib import Path
@@ -44,6 +44,19 @@ SAMPLE_CONTEXT = {
         "name": "organvm",
         "total_organs": 8,
     },
+    "digest": {
+        "week_label": "Feb 24 – Mar 1, 2026",
+        "essay_1_title": "First Essay Title",
+        "essay_1_url": "https://example.com/essay-1",
+        "essay_1_summary": "Summary of the first essay.",
+        "essay_2_title": "Second Essay Title",
+        "essay_2_url": "https://example.com/essay-2",
+        "essay_2_summary": "Summary of the second essay.",
+        "essay_3_title": "Third Essay Title",
+        "essay_3_url": "https://example.com/essay-3",
+        "essay_3_summary": "Summary of the third essay.",
+        "site_url": "https://organvm-v-logos.github.io/public-process/",
+    },
 }
 
 
@@ -69,9 +82,9 @@ def test_template_renders_all_channels(template_file: Path):
         )
 
 
-def test_all_16_templates_discovered():
-    """Verify we have exactly 16 template files."""
-    assert len(TEMPLATE_FILES) == 16, (
-        f"Expected 16 templates, found {len(TEMPLATE_FILES)}: "
+def test_all_17_templates_discovered():
+    """Verify we have exactly 17 template files."""
+    assert len(TEMPLATE_FILES) == 17, (
+        f"Expected 17 templates, found {len(TEMPLATE_FILES)}: "
         f"{[f.stem for f in TEMPLATE_FILES]}"
     )
