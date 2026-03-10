@@ -7,7 +7,7 @@ This repo participates in the **ORGAN-VII (Marketing)** swarm.
 - *No active event subscriptions*
 
 ### Production Responsibilities
-- *No production responsibilities*
+- **Produce** `template_pack` for ORGAN-IV
 
 ### External Dependencies
 - *No external dependencies*
@@ -16,5 +16,5 @@ This repo participates in the **ORGAN-VII (Marketing)** swarm.
 - Adhere to unidirectional flow: I→II→III
 - Never commit secrets or credentials
 
-*Last synced: 2026-02-24T12:41:28Z*
+*Last synced: 2026-03-08T20:11:35Z*
 <!-- ORGANVM:AUTO:END -->
