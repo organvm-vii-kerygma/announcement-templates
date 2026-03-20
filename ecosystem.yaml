@@ -1,0 +1,25 @@
+schema_version: '1.0'
+repo: announcement-templates
+organ: VII
+display_name: "Announcement Templates — Template registry with metadata, quality checks, and channel limits"
+
+delivery:
+- platform: python_library
+  status: live
+  priority: high
+  notes: "Template pack with registry, quality checks, channel limit enforcement"
+  next_action: "Maintain template quality as new channels are added"
+
+marketing:
+- platform: template_system
+  status: live
+  priority: critical
+  notes: "Cross-channel announcement templates consumed by kerygma-pipeline"
+  next_action: "Expand template coverage for new announcement types"
+
+content:
+- platform: docs_site
+  status: not_started
+  priority: medium
+  notes: "Template authoring guide, channel limits reference"
+  next_action: "Document template format and channel constraints"
