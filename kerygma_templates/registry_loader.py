@@ -12,6 +12,13 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+try:
+    from organvm_engine.registry.loader import load_registry as _engine_load_registry
+
+    _HAS_ENGINE_REGISTRY = True
+except ImportError:
+    _HAS_ENGINE_REGISTRY = False
+
 
 @dataclass
 class RepoContext:
@@ -51,7 +58,10 @@ class RegistryLoader:
 
     def load(self, path: Path) -> int:
         """Load registry JSON. Returns number of repo entries parsed."""
-        raw = json.loads(path.read_text(encoding="utf-8"))
+        if _HAS_ENGINE_REGISTRY:
+            raw = _engine_load_registry(path)
+        else:
+            raw = json.loads(path.read_text(encoding="utf-8"))
         self._registry = raw
 
         # Parse repos from each organ section
