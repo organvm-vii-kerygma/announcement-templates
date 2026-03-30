@@ -69,7 +69,11 @@ class RegistryLoader:
         organs = raw.get("organs", raw)
         if isinstance(organs, dict):
             for organ_key, organ_data in organs.items():
-                repos = organ_data.get("repos", []) if isinstance(organ_data, dict) else []
+                repos: list[Any] = []
+                if isinstance(organ_data, dict):
+                    repos = organ_data.get("repositories")
+                    if repos is None:
+                        repos = organ_data.get("repos", [])
                 for repo in repos:
                     if isinstance(repo, dict) and "name" in repo:
                         ctx = RepoContext(

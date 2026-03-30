@@ -58,6 +58,22 @@ class TestRegistryLoader:
         count = loader.load(path)
         assert count == 1
 
+    def test_load_from_canonical_repositories_key(self, tmp_path):
+        data = {
+            "organs": {
+                "ORGAN-I": {
+                    "repositories": [{"name": "r1", "description": "d", "tier": "flagship"}]
+                }
+            }
+        }
+        path = tmp_path / "registry.json"
+        path.write_text(json.dumps(data))
+        loader = RegistryLoader()
+        count = loader.load(path)
+        assert count == 1
+        assert loader.repo_count == 1
+        assert loader.get_repo("r1") is not None
+
     def test_missing_file_no_crash(self):
         loader = RegistryLoader(Path("/nonexistent/file.json"))
         assert loader.repo_count == 0
